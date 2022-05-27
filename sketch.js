@@ -1,32 +1,42 @@
-var ball
+
 function setup() {
   createCanvas(400,400);
-  ball=createSprite(200,200,50,50)
-  ball.shapeColor="lightpink"
+  background(51);
+  box = createSprite(200,200,30,30);
+
 }
 
 function draw() 
 {
-  background("#eddb8a");
-  if (keyIsDown(UP_ARROW)) {
-    ball.y=ball.y-5
+if (keyIsDown(RIGHT_ARROW))
+ {
+ background("red")
+  
+}
+  // write the code to change background color 
+  // to red when RIGHT_ARROW is pressed
+  
+  
+
+  if (keyIsDown(LEFT_ARROW)) 
+  {
+    background("blue");
+    
+  }
+ 
+    if (keyIsDown(UP_ARROW)) 
+  {
+    background("yellow");
+   
+  }
+
+  if (keyIsDown(DOWN_ARROW)) 
+  {
+    background("green");
+  }
+
 
   
-  }
-  if(keyIsDown(DOWN_ARROW)){
-    ball.y=ball.y+5
-  }
-  if (keyIsDown(LEFT_ARROW)) {
-    ball.x=ball.x-5
-    
-  }
-  if (keyIsDown(RIGHT_ARROW)) {
-    ball.x=ball.x+5
-    
-  }
-drawSprites()
+  drawSprites();
 }
-
-
-
 
